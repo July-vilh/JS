@@ -7,21 +7,11 @@ Declaring a variable is as simple as using the keyword var. Which would look lik
 
 var x = 10;
 
-In this example we’ve assigned a value of 10 to the variable x.
-
-We’ve used the word assigned deliberately here, because in JavaScript, the equal sign (=) is actually called the "assignment" operator, rather than an "equal to" operator.
 
 Which means that in JavaScript, x = y will assign the value of y to x variable.
 
-Heads up!
-
 JavaScript is sensitive, case sensitive that is. So variables like lastName and lastname are not the same.
 
-Using Variables
-
-Ok, let’s put some of what we’ve learned together!
-
-How about we assign a value to a variable and output it to the browser. We’ve got this!
 
 var x = 100;
 
@@ -39,7 +29,6 @@ x = 42;
 
 document.write(x);
 
-Heads Up!
 
 Every written "instruction" is called a statement. JavaScript statements are separated by semicolons.
 
@@ -49,8 +38,6 @@ Naming Variables
 Let’s talk about names.
 
 It’s super important to remember that JavaScript variable names are case-sensitive.
-
-What do you think the output of the following code would be?
 
 var x = 100; 
 
@@ -69,8 +56,6 @@ Brace yourself for more rules!
 + Variable names can’t contain spaces.
 
 + You’re not allowed to use any special symbols, like my#num, num%, etc.
-
-Heads up!
 
 JavaScript is a hyphen free zone. They’re reserved for subtractions.
 
@@ -114,8 +99,6 @@ var price = 55.55; // A number with decimals
 
 document.write(price); 
 
-Heads up!
-
 Changing this variable is a breeze, just assign to it any other data type value, like num = 'some random string'.
 
 ---
@@ -131,8 +114,6 @@ What if we want to use quotes inside a string though?? No problem! You can use q
 Take a look:
 
 var text = "My name is 'John' ";
-
-Heads up!
 
 You can get double quotes inside of double quotes using the escape character like this: \" or \' inside of single quotes.
 
@@ -158,8 +139,6 @@ So when you need a data type that can only have one of two possible values, like
 var isActive = true;
 
 var isHoliday = false;
-
-Heads up!
 
 The Boolean value of 0 (zero), null, undefined, empty string is false.
 
