@@ -1,0 +1,23 @@
+1. Перейти на сайт:
+   
+cy.visit("")
+
+2. Проверка валидности заголовка:
+
+cy.title().should('equal', 'Login | Gun Made')
+
+ 3. Проверка валидности урла:
+
+cy.url().should('equal', loginUrl)
+
+
+_________________________
+Locators:
+
+1. CSS
+2. XPath
+
+В метод get передается ЛОКАТОР с помощью которого мы будем идентифицировать необходимый для нас ЭЛЕМЕНТ для теста 
+
+cy.get("input[name='email']").should('exist').and('be.visible')
+
