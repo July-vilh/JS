@@ -21,3 +21,8 @@ Locators:
 
 cy.get("input[name='email']").should('exist').and('be.visible')
 
+
+////////////////////////////////////// ELEMENTS ////////////////////////////////////
+
+
+
