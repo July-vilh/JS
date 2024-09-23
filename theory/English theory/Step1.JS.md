@@ -13,7 +13,7 @@ console.log ('Testing in progress').
 
 The Code Playground
 
-console.log ('My first console message')
+'console.log ('My first console message')'
 
 The Code Playground has sections for the 3 core web technologies.
 - HTML controls the structure of a web page.
