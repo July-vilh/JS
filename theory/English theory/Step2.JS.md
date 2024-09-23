@@ -92,7 +92,7 @@ Now is a good time to talk about the backslash (\) escape character. It comes to
 
 Take a look:
 
-`let sayHello = 'Hello world! \'I am a JavaScript programmer.\' '; 
+`let sayHello = 'Hello world! \'I am a JavaScript programmer.\' ';`
 
 document.write(sayHello);`
 
