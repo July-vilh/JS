@@ -10,7 +10,7 @@ Below you can see the addition operator (+) in action determining the sum of two
 
 `console.log (x);`
 
-Result: `15c
+Result: `15`
 _________
 
 You can add as many numbers or variables together as you want or need to.
@@ -82,7 +82,7 @@ The increment operator increases the numeric value of its operand by 1. When pla
 
 The decrement operator decreases the numeric value of its operand by 1. When placed before the operand, it’ll return the decremented value. When placed after the operand, it’ll return the original value and then decrements the operand.
 
-var x = (100 + 50) * 3;
+`let x = (100 + 50) * 3;`
 
 ---
 ## Assignment Operators ##
