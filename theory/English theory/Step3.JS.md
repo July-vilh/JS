@@ -6,18 +6,23 @@ The name might be a bit of a giveaway but, Arithmetic operators pretty perform a
 
 Below you can see the addition operator (+) in action determining the sum of two numbers.
 
-var x = 10 + 5; 
+`let x = 10 + 5;`
 
-document.write (x); 
+`console.log (x);`
+
+Result: `15c
+_________
 
 You can add as many numbers or variables together as you want or need to.
 
-var x = 10; 
+`let x = 10;`
 
-var y = x + 5 + 22 + 45 + 6548; 
+`let y = x + 5 + 22 + 45 + 6548;`
 
-document.write (y); 
+`console.log(y);`
 
+Result: `6630`
+_______
 
 You can get the result of a string expression using the eval() function, which takes a string expression argument like eval("10 * 20 + 8") and returns the result. If the argument is empty, it returns undefined.
 
@@ -28,9 +33,11 @@ We use the * operator to multiply one number by the other.
 
 Like this:
 
-var x = 10 * 5; 
+`let x = 10 * 5; `
 
-document.write(x); 
+`console.log(x);`
+
+Result: `50`
 
 10 * '5' or '10' * '5' will give the same result. But trying to multiply a number with string values that aren’t numbers, like 'sololearn' * 5 will return NaN (Not a Number).
 
@@ -41,9 +48,11 @@ We use the / operator to perform division operations.
 
 Like this:
 
-var x = 100 / 5; 
+`let x = 100 / 5;`
 
-document.write(x); 
+`console.log(x);`
+
+Result: `20`
 
 Beware of situations where there could be a division by 0, things get messed up when we do impossible math!
 
@@ -54,9 +63,11 @@ The Modulus (%) operator returns the division remainder (what’s left over).
 
 Like this:
 
-var myVariable = 26 % 6; 
+`let myVariable = 26 % 6;`
 
-Because you’re left with a remainder of 2 when you divide 26 by 6.
+`console.log(myVariable)`
+
+Result: `2`
 
 In JavaScript, we can use the modulus operator on integers AND on floating point numbers.
 
