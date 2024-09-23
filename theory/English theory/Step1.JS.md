@@ -19,20 +19,6 @@ The Code Playground has sections for the 3 core web technologies.
 - HTML controls the structure of a web page.
 - CSS controls the presentation and style of a web page.
 
----
-## Output ##
-
-Let's use JavaScript to print "Hello World" to the browser. This is what that would look like.
-  
-document.write("Hello World!"); 
-
-Time to introduce the document.write() function. This is what we need to use to write text into our HTML document.
-
-The console is part of the web browser and allows you to log messages, run JavaScript code, and see errors and warnings.
-It looks like this:
-
-console.log("Hello!"); 
-
 
 
 
