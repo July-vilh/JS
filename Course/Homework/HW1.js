@@ -15,7 +15,8 @@ sum("3", "4")
 ____________
 
 /* 3. Написать функцию, которая принимает 3 строки // 3. Write a function that takes 3 strings 
-В самой функции посчитать произведение 3 строк с учетом того, что их нужно конвертировать в число //  Inside the function, calculate the product of the 3 strings, making sure to convert them to numbers 
+В самой функции посчитать произведение 3 строк с учетом того, что их нужно конвертировать в число //  Inside the function, calculate the product of the 3 strings, 
+making sure to convert them to numbers 
 Важно: строка может иметь значение с плаваюшей точкой (parseFloat) // Important: the string can contain a floating-point value (use parseFloat) */
 
 function multiply (a, b, c){
