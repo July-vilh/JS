@@ -30,6 +30,8 @@ function calculate(a, b, c, d) {
 
 calculate(1, 2, 3, "+")
 
+// Result: 6 (as expected)
+
 
 /* 2. Написать функцию, которая принимает 2 строки // 2. Write a function that takes 2 strings. 
 В самой функции мы должны сделать сложение 2 строк (строки должны быть в виде чисел) // Inside the function, we should add the two strings (the strings should represent numbers) 
