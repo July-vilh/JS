@@ -26,3 +26,5 @@ function multiply (a, b, c){
     console.log(aa * bb * cc)
 }
 multiply("3.14", "10", "5")
+
+// Result: 157 (as expected)
