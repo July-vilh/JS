@@ -34,7 +34,7 @@ Example:
 
 `function myFunction() {` 
 
-`alert("Calling a Function!");` 
+`console.log("Calling a Function!");` 
 
 `}` 
 
@@ -48,19 +48,19 @@ Once the function is defined, JavaScript allows you to call it as many times as 
 
 `function myFunction() {` 
 
-`alert("Alert box!");` 
+`console.log("Alert box!");` 
 
 `}` 
 
 `myFunction();` 
 
-//"Alert box!" 
+`//"Alert box!" `
 
-// some other code 
+`// some other code `
 
-myFunction(); 
+`myFunction();` 
 
-//"Alert box!"
+`//"Alert box!"`
 
 
 You can also call a function using this syntax: `myFunction.call()`. The difference is that when calling in this way, you're passing the 'this' keyword to a function. 
@@ -87,7 +87,7 @@ After defining the parameters, you can use them inside the function.
 
 `function sayHello(name) {` 
 
-`alert("Hi, " + name);` 
+`console.log("Hi, " + name);` 
 
 `}` 
 
@@ -102,7 +102,7 @@ You can define a single function, and pass different parameter values (arguments
 
 `function sayHello(name) {` 
 
-`alert("Hi, " + name);` 
+`console.log("Hi, " + name);` 
 
 `}` 
 
@@ -238,7 +238,7 @@ Example:
 
 `let user = prompt ("Please enter your name");` 
 
-`alert (user);`
+`console.log (user);`
 
 When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value. 
 
