@@ -54,68 +54,62 @@ Let's look at another example:
 
 `case 3:` 
 
-document.write("Wednesday"); 
+`console.log("Wednesday");` 
 
-break; 
+`break;` 
 
-default: 
+`default:` 
 
-document.write("Another day"); 
+`console.log("Another day");` 
 
-} 
+`}` 
 
-Simple, right?
-Heads up!
-You can have as many case statements as you need.
 
-The break Keyword
+The `break` Keyword
 
 So we have learned that the switch statement tests a code block, but we won't always want it to test the whole block. The break keyword essentially switches the switch statement off.
 
 Breaking out of the switch block stops the execution of more code and case testing inside the block.
-Heads up!
-Usually, a break should be put in each case statement.
 
-The default Keyword
+The `default` Keyword
 
 Often there will be no match, but we still need the program to output something...for this we use the default keyword, which specifies the code to run if there’s no case match.
 
 Like this:
 
-var color ="yellow"; 
+`let color ="yellow";` 
 
-switch(color) { 
+`switch(color) {` 
 
-case "blue": 
+`case "blue":` 
 
-document.write("This is blue."); 
+`console.log("This is blue.");` 
 
-break; 
+`break;` 
 
-case "red": 
+`case "red":` 
 
-document.write("This is red."); 
+`console.log("This is red.");` 
 
-break; 
+`break;` 
 
-case "green": 
+`case "green":` 
 
-document.write("This is green.");
+`console.log("This is green.");`
 
-break; 
+`break;` 
 
-case "orange": 
+`case "orange":` 
 
-document.write("This is orange."); 
+`console.log("This is orange.");` 
 
-break; 
+`break;` 
 
-default: 
+`default:` 
 
-document.write("Color not found."); 
+`console.log("Color not found.");` 
 
-} 
+`}` 
 
-Heads up!
 The default block can be omitted, if there is no need to handle the case when no match is found.
 
