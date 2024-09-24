@@ -6,53 +6,53 @@ Instead, we can use the switch statement to perform different actions based on d
 
 Here's what that looks like:
 
-switch (expression) { 
+`switch (expression) {` 
 
-case n1: 
+`case n1:` 
 
-statements 
+`statements `
 
-break; 
+`break; `
 
-case n2: 
+`case n2:` 
 
-statements 
+`statements` 
 
-break; 
+`break;` 
 
-default: 
+`default:` 
 
-statements 
+`statements` 
 
-}
+`}`
 
 The switch expression is evaluated once. The value of the expression is compared with the values of each case, and if there’s a match, that block of code is executed.
 Heads up!
 
 You can achieve the same result with multiple if...else statements, but the switch statement is more effective in such situations.
 
-The switch Statement
+The `switch` Statement
 
 
 Let's look at another example:
 
-var day = 2; 
+`let day = 2;` 
 
-switch (day) { 
+`switch (day) {` 
 
-case 1: 
+`case 1:` 
 
-document.write("Monday"); 
+`console.log("Monday");` 
 
-break; 
+`break;` 
 
-case 2: 
+`case 2:` 
 
-document.write("Tuesday"); 
+`console.log("Tuesday");` 
 
-break; 
+`break;` 
 
-case 3: 
+`case 3:` 
 
 document.write("Wednesday"); 
 
