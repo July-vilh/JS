@@ -26,7 +26,7 @@
 
 // Add text to the button
 
-`Button.textContent = "new button";`
+` Button.textContent = "new button";`
 
 // Assign class and id
 
@@ -80,7 +80,7 @@ meaning the element will be placed outside of any other existing elements and wi
 
 + Example:
 
-`<body>`
+` - <body>`
 
     `- A new div will be added here -->`
     
