@@ -21,77 +21,101 @@
 
 4. To make the element appear on the page, you need to insert it into the DOM (the existing HTML structure). You can do this using methods like appendChild(), insertBefore(), or append().
 
-`document.body.appendChild(newButton);`
+```javascript
+document.body.appendChild(newButton);
+```
 
 + Example:
 
 // Create a new button element
 
-`let Button = document.createElement('button');`
+```javascript
+let Button = document.createElement('button');
+```
 
 // Add text to the button
 
-` Button.textContent = "new button";`
+```javascript
+Button.textContent = "new button";
+```
 
 // Assign class and id
 
-`Button.classList.add('new-Button');`
-
-`Button.id = 'uniqueButton';`
+```javascript
+Button.classList.add('new-Button');
+Button.id = 'uniqueButton';
+```
 
 // Insert the new button into the page body
 
-`document.body.appendChild(Button);`
+```javascript
+document.body.appendChild(Button);
+```
 
-Practical example for adding a button:
+### Practical example for adding a button: ###
 
 // Create an input
 
-`let Input = document.createElement('input');`
+```javascript
+let Input = document.createElement('input');
+```
 
 // Set the input text
 
-`Input.textContent = "Input some values";`
+```javascript
+Input.textContent = "Input some values";
+```
 
 // Add an ID to the button
 
-`Input.id = 'myInput';`
+```javascript
+Input.id = 'myInput';
+```
 
 // Insert the input into a specific element, for example, a div with id="container"
 
-`document.getElementById('container').appendChild(button);`
+```javascript
+document.getElementById('container').appendChild(button);
+```
 
 This way, you can dynamically add elements to the HTML structure using JavaScript.
 
 ## The difference between these two lines lies in where the new element is added in the HTML structure (DOM): ##
 
-`document.getElementById('container').appendChild(button);`
+```javascript
+document.getElementById('container').appendChild(button);
+```
 
 In this line, you are adding the element (in this case, the button) to an existing element with the id container. 
+
 This means the button will be nested inside the element with the id container.
 
 + Example:
 
-`<div id="container">`
+```javascript
+<div id="container">
+```
+    - The button will be added here `
 
-    ` - The button will be added here `
+```javascript
+</div>
 
-    ` - The button will be added here `
-    
-`</div>`
-
-`document.body.appendChild(div);`
+document.body.appendChild(div);
+```
 
 Here, you are adding the element (in this case, a div) directly to the end of the <body> element, 
 meaning the element will be placed outside of any other existing elements and will become a child of the <body> tag itself.
 
 + Example:
 
-` - <body>`
+```javascript
+ - <body>
+```
+    - A new div will be added here -->
 
-    `- A new div will be added here -->`
-    
-`</body>`
+ ```javascript
+</body>
+```
 
 ### Key Difference: ###
 
