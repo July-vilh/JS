@@ -1,4 +1,4 @@
-Create the element:
+## Create the element: ##
 
 1. Use `document.createElement('tagName')`, where `tagName` is the name of the HTML tag you want to create (e.g., div, button, p, input, etc.).
 
