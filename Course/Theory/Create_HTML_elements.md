@@ -68,7 +68,9 @@ This means the button will be nested inside the element with the id container.
 + Example:
 
 `<div id="container">`
-    <!-- The button will be added here -->
+
+    ` - The button will be added here `
+    
 `</div>`
 
 `document.body.appendChild(div);`
@@ -79,7 +81,9 @@ meaning the element will be placed outside of any other existing elements and wi
 + Example:
 
 `<body>`
-    <!-- A new div will be added here -->
+
+    `- A new div will be added here -->`
+    
 `</body>`
 
 ### Key Difference: ###
