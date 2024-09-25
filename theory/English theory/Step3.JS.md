@@ -5,21 +5,19 @@
 The name might be a bit of a giveaway but, Arithmetic operators pretty perform arithmetic functions on numbers (both literals and variables).
 
 Below you can see the addition operator (+) in action determining the sum of two numbers.
-
-`let x = 10 + 5;`
-
-`console.log (x);`
-
+```javascript
+let x = 10 + 5
+console.log (x);
+```
 Result: `15`
 _________
 
 You can add as many numbers or variables together as you want or need to.
-
-`let x = 10;`
-
-`let y = x + 5 + 22 + 45 + 6548;`
-
-`console.log(y);`
+```javascript
+let x = 10;
+let y = x + 5 + 22 + 45 + 6548;
+console.log(y);
+```
 
 Result: `6630`
 _______
@@ -32,10 +30,10 @@ You can get the result of a string expression using the eval() function, which t
 We use the * operator to multiply one number by the other.
 
 Like this:
-
-`let x = 10 * 5; `
-
-`console.log(x);`
+```javascript
+let x = 10 * 5; 
+console.log(x);
+```
 
 Result: `50`
 
@@ -47,10 +45,10 @@ Result: `50`
 We use the / operator to perform division operations.
 
 Like this:
-
-`let x = 100 / 5;`
-
-`console.log(x);`
+```javascript
+let x = 100 / 5;
+console.log(x);
+```
 
 Result: `20`
 
@@ -62,10 +60,10 @@ Beware of situations where there could be a division by 0, things get messed up 
 The Modulus (%) operator returns the division remainder (what’s left over).
 
 Like this:
-
-`let myVariable = 26 % 6;`
-
-`console.log(myVariable)`
+```javascript
+let myVariable = 26 % 6;
+console.log(myVariable)
+```
 
 Result: `2`
 
@@ -81,8 +79,9 @@ The increment operator increases the numeric value of its operand by 1. When pla
 ### Decrement -- ###
 
 The decrement operator decreases the numeric value of its operand by 1. When placed before the operand, it’ll return the decremented value. When placed after the operand, it’ll return the original value and then decrements the operand.
-
-`let x = (100 + 50) * 3;`
+```javascript
+let x = (100 + 50) * 3;
+```
 
 ---
 ## Assignment Operators ##
