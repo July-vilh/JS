@@ -2,16 +2,22 @@
 
 1. Use `document.createElement('tagName')`, where `tagName` is the name of the HTML tag you want to create (e.g., div, button, p, input, etc.).
 
-    ` let newButton = document.createElement('button'); `
+```javascript
+    let newButton = document.createElement('button');
+```
 
 2. To add text to the element, you can use `textContent` or `innerHTML`.
 
-    `newButton.textContent = "Hello, I am a new div!";`
+```javascript
+    newButton.textContent = "Hello, I am a new button!";
+```
 
 3. If you need to add attributes (such as class, id, or src for images), you can use the setAttribute() method or assign them directly via properties.
 
-    `newElement.setAttribute('class', 'my-button-class');`
-    `newElement.id = 'my-button';`
+```javascript
+    newElement.setAttribute('class', 'my-button-class');
+    newElement.id = 'my-button';
+```
 
 4. To make the element appear on the page, you need to insert it into the DOM (the existing HTML structure). You can do this using methods like appendChild(), insertBefore(), or append().
 
