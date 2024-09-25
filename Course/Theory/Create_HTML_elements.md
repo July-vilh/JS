@@ -2,7 +2,7 @@
 
 1. Use `document.createElement('tagName')`, where `tagName` is the name of the HTML tag you want to create (e.g., div, button, p, input, etc.).
 
-    `let newButton = document.createElement('button');`
+    ` let newButton = document.createElement('button'); `
 
 2. To add text to the element, you can use `textContent` or `innerHTML`.
 
