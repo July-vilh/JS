@@ -10,15 +10,17 @@ Which means that in JavaScript, x = y will assign the value of y to x variable.
 
 JavaScript is sensitive, case sensitive that is. So variables like lastName and lastname are not the same.
 
-`let x = 100;`
-
-`console.log(X);`
+```javascript
+let x = 100;
+console.log(X);
+```
 
 ## Naming Variables ##
 
-`let x = 100;`
-
-`console.log(X);`
+```javascript
+let x = 100;
+console.log(X);
+```
 
 Rules:
 
@@ -33,7 +35,6 @@ Rules:
 + You’re not allowed to use any special symbols, like my#num, num%, etc.
 
 JavaScript is a hyphen free zone. They’re reserved for subtractions.
-
 
 ## Comments in JavaScript ##
 
@@ -55,7 +56,9 @@ Like this:
 creates an 
 alert box */`
 
-alert("This is an alert box!"); 
+```javascript
+alert("This is an alert box!");
+```
 
 ---
 ## Data Types ##
@@ -63,10 +66,10 @@ alert("This is an alert box!");
 The term data type refers to the types of values a program can work with. The sky's the limit with JavaScript variables, which can hold a bunch of different data types–numbers, strings, arrays, you name it.
 
 Let's start simple though. Numbers can be written with or without decimals. Like this:
-
-`let num = 42;` // A number without decimals
-
-`let price = 55.55;` // A number with decimals 
+```javascript
+let num = 42; // A number without decimals
+let price = 55.55; // A number with decimals
+```
 
 Changing this variable is a breeze, just assign to it any other data type value, like `num = 'some random string'`.
 
@@ -75,14 +78,18 @@ Changing this variable is a breeze, just assign to it any other data type value,
 
 In JavaScript we can use strings to store and manipulate text. A string can be any text wrapped in quotes. Single or double quotes, it doesn’t matter, so long as you’re consistent with them. Like this:
 
-`let name = 'John';`
-
-`let text = "My name is John Smith";`
+```javascript
+let name = 'John';
+let text = "My name is John Smith";
+```
 
 You can use quotes inside a string, as long as they don't match the quotes enclosing the string itself. 
+
 Take a look:
 
-`let text = "My name is 'John' ";`
+```javascript
+let text = "My name is 'John' ";
+```
 
 You can get double quotes inside of double quotes using the escape character like this: \" or \' inside of single quotes.
 
@@ -91,10 +98,10 @@ Strings
 Now is a good time to talk about the backslash (\) escape character. It comes to the rescue when you need to put quotes within strings (and a bunch of other situations) by transforming special characters into string characters.
 
 Take a look:
-
-`let sayHello = 'Hello world! \'I am a JavaScript programmer.\' ';`
-
-document.write(sayHello);`
+```javascript
+let sayHello = 'Hello world! \'I am a JavaScript programmer.\' ';
+console.log(sayHello);
+```
 
 If you start a string with a single quote, then you need to end it with a single quote too. This applies to double quotes. Otherwise, JavaScript will get confused. Poor JavaScript.
 
@@ -104,10 +111,10 @@ If you start a string with a single quote, then you need to end it with a single
 Booleans in JavaScript serve a useful function by letting you have one of two values, either true or false.
 
 So when you need a data type that can only have one of two possible values, like Yes/No, on/off or true/false, look no further than Mr Boolean. Let’s look at an example:
-
-`let isActive = true;`
-
-`let isHoliday = false;`
+```javascript
+let isActive = true;
+let isHoliday = false;
+```
 
 The Boolean value of 0 (zero), null, undefined, empty string is false.
 
