@@ -109,7 +109,7 @@ meaning the element will be placed outside of any other existing elements and wi
 + Example:
 
 ```javascript
- - <body>
+<body>
 ```
     - A new div will be added here -->
 
