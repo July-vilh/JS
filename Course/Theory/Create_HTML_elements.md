@@ -18,7 +18,7 @@
 
 `document.body.appendChild(newButton);`
 
-Example:
++ Example:
 
 // Create a new button element
 
@@ -65,7 +65,7 @@ This way, you can dynamically add elements to the HTML structure using JavaScrip
 In this line, you are adding the element (in this case, the button) to an existing element with the id container. 
 This means the button will be nested inside the element with the id container.
 
-Example:
++ Example:
 
 `<div id="container">`
     <!-- The button will be added here -->
@@ -76,7 +76,7 @@ Example:
 Here, you are adding the element (in this case, a div) directly to the end of the <body> element, 
 meaning the element will be placed outside of any other existing elements and will become a child of the <body> tag itself.
 
-Example:
++ Example:
 
 `<body>`
     <!-- A new div will be added here -->
