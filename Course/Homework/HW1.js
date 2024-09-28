@@ -7,47 +7,41 @@ function calculate(a, b, c, d) {
     if (d === "+") {
         console.log(a + b + c);
     } else if (d === "-") {
-        console.log(b - a - c);
+        console.log(a - b - c);
     } else if (d === "*") {
         console.log(a * b * c);
     } else if (d === "/") {
-        if (a === 0) {
-            console.log("It cannot be divided by 0");
-        }
         if (b === 0) {
-            console.log("It cannot be divided by 0");
+            console.log("It cannot be divided by 0 (b)");
+        } else if (c === 0) {
+            console.log("It cannot be divided by 0 (c)");
+        } else {
+            console.log(a / b / c);
         }
-        if (c === 0) {
-            console.log("It cannot be divided by 0");
-        }
-    } else if (d === "/") {
-        console.log(a / b / c);
     } else {
         console.log("Unknown operator");
     }
 }
 
+calculate(20, 5, 1, "/") 
 
-calculate(1, 2, 3, "+")
-
-// Result: 6 (as expected)
+// Result: 4 (as expected)
 
 
 /* 2. Написать функцию, которая принимает 2 строки // 2. Write a function that takes 2 strings. 
 В самой функции мы должны сделать сложение 2 строк (строки должны быть в виде чисел) // Inside the function, we should add the two strings (the strings should represent numbers) 
 и посчитать их сумму использую конвертацию в число ** calculate their sum by converting them to numbers. */
 
-function sum(a, b){
+ function sum(a, b){
     let aa = parseInt(a);
     let bb = parseInt(b);
     console.log(aa+bb)
 }
 
-sum("3", "4")
+sum("3", "4") 
 
 //Result: 7 (as expected)
 
-____________
 
 /* 3. Написать функцию, которая принимает 3 строки // 3. Write a function that takes 3 strings 
 В самой функции посчитать произведение 3 строк с учетом того, что их нужно конвертировать в число //  Inside the function, calculate the product of the 3 strings, 
@@ -56,10 +50,10 @@ making sure to convert them to numbers
 
 function multiply (a, b, c){
     aa = parseFloat(a);
-    bb = parseInt(b);
-    cc = parseInt(c);
+    bb = parseFloat (b);
+    cc = parseFloat(c);
     console.log(aa * bb * cc)
 }
-multiply("3.14", "10", "5")
+multiply("3.14", "10", "5.6") 
 
-// Result: 157 (as expected)
+// Result: 175.84 (as expected) 
