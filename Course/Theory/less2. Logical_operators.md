@@ -39,11 +39,11 @@ Result: `at least one condition is true` (`x || y` is true because `x` is true. 
 
 Create a program that determines the season based on the month and temperature. Conditions:
 
-- If the month is "December", "January", or "February" and the temperature is below 0, output "Winter".
-- If the month is "March", "April", or "May" and the temperature is between 10 and 20, output "Spring".
-- If the month is "June", "July", or "August" and the temperature is above 20, output "Summer".
-- If the month is "September", "October", or "November" and the temperature is below 20, output "Autumn".
-- If the month or temperature is not specified, output "No information".
+- If the `month` is `"December", "January", or "February"` and the `temperature` is `below 0`, output `"Winter"`.
+- If the `month` is `"March", "April", or "May"` and the `temperature` is `between 10 and 20`, output `"Spring"`.
+- If the `month` is `"June", "July", or "August"` and the `temperature` is `above 20`, output `"Summer"`.
+- If the `month` is `"September", "October", or "November"` and the `temperature is below 20`, output `"Autumn"`.
+- If the month or temperature is not specified, output `"No information"`.
 
 ```javascript
 function seasons(month, temperature) {
