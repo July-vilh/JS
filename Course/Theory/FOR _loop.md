@@ -34,7 +34,7 @@ for (let i = 0; i <= 10; i++) {
 }
 ```
 
-### Step-by-Step Breakdown:
+#### Step-by-Step Breakdown:
 + Initialization `(let i = 0)`: The loop starts by declaring and initializing the variable i to 0.
 + Condition `(i <= 10)`: The loop checks if `i` is less than or equal to 10. If true, the loop continues; otherwise, it stops.
 + Action `(console.log(i))`: If the condition is met, the current value of `i` is printed to the console.
@@ -59,6 +59,8 @@ for (let i = 0; i <= 10; i += 2) {
     // until 'i' exceeds 10.
 }
 ```
+Result: `0, 2, 4, 6, 8, 10`
+
 #### Step-by-Step Breakdown:
 + Initialization `(let i = 0)`: The loop starts by declaring and initializing the variable i to 0.
 + Condition `(i <= 10)`: The loop checks if i is less than or equal to 10. If true, the loop continues; if false, it stops.
@@ -75,8 +77,18 @@ for (let i=0; i<=10; i++) {
 }
 ```
 
-Result: 
+Result: `0, 2, 4, 6, 8, 10`
 
+#### Step-by-Step Breakdown:
++ Initialization `(let i = 0)`: The loop starts by declaring and initializing the variable i to 0.
++ Condition `(i <= 10)`: The loop checks if i is less than or equal to 10. If true, the loop continues; if false, it stops.
++ Modulo Check `(i % 2 === 0)`: Inside the loop, the `if` statement checks if `i` is `even` by using the modulo operator `(%)`. If `i` divided by `2` has a remainder of 0, it means `i` is even.
++ Action `(console.log(i))`: If the `if` condition is `true` (i.e., `i` is `even`), the current value of `i` is printed to the console.
++ Increment `(i++)`: After each iteration, `i` is increased by `1`, and the loop continues.
++ Repeat: The loop repeats this process, printing only the `even` numbers from `0 to 10`, until `i` exceeds `10`.
++ The loop prints the even numbers from `0 to 10`: `0, 2, 4, 6, 8, 10`.
+
+In this case, the if condition ensures that only even numbers (those that satisfy i % 2 === 0) are logged to the console, while odd numbers are skipped.
 
 ## Task 3: Calculate the Sum of Array Elements Using a For Loop
 
