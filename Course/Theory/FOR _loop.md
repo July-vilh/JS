@@ -19,7 +19,7 @@ And here’s what happens when it runs:
 ## For example
 
 ```javascript
-// Start a for loop, with 'i' initialized to 0.
+// Start a "for" loop, with 'i' initialized to 0.
 // The loop will continue running as long as 'i' is less than or equal to 10.
 // After each iteration, 'i' is incremented by 1.
 
