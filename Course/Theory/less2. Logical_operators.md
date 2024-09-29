@@ -16,7 +16,7 @@ if (x > 7 && y > 10) {
 }
 ```
 
-Result: Both variables = true (Both conditions (x > 7 and y > 10) are true, so the result is true.)
+Result: `Both variables = true` (Both conditions (x > 7 and y > 10) are true, so the result is true.)
 
 ### 2. || (Logical OR):
 
@@ -33,3 +33,4 @@ if (x > 7 || y > 20) {
   console.log ("all conditions = false") 
 }
 ```
+Result: `at least one condition is true` (`x || y` is true because `x` is true. Only `one` value needs to be `true` for the result to be `true`.)
