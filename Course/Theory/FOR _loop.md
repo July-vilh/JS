@@ -1,4 +1,5 @@
 Loops can execute a block of code a number of times. They’re handy when you want to run the same code repeatedly, adding a different value each time.
+
 Циклы могут выполнять блок кода несколько раз. Они удобны, когда вы хотите многократно запускать один и тот же код, каждый раз добавляя новое значение.
 
 ```javascript
