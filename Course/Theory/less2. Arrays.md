@@ -42,3 +42,54 @@ let lastFruit = fruits.pop();  // Removes "Cherry"
 console.log(fruits);           // Output: ["Apple", "Banana"]
 console.log(lastFruit);        // Output: "Cherry"
 ```
+
+## Random and arrays
+
+To select random numbers from an array or generate random numbers, you can use `Math.random()` and `Math.floor()` together. Here's a breakdown:
+
+### 1. `Math.random()`
+
+`Math.random()` generates a random `decimal number between 0 (inclusive) and 1 (exclusive)`. So, it will return something like 0.1234 or 0.9876.
+
+``` javascript
+console.log(Math.random());  // Output: a number between 0 and 1, like 0.5432
+```
+
+### 2. `Math.random() * N`
+
+To get a random number `between 0 and a specific number N (like 9)`, you can multiply `Math.random() by N`.
+
+``` javascript
+console.log(Math.random() * 9);  // Output: a decimal between 0 and 9, like 4.567
+```
+### 3. `Math.floor()`
+
+`Math.floor()` is used to round down a decimal number to the nearest whole number. // `Math.floor()` используется для округления десятичного числа в меньшую сторону до ближайшего целого числа.
+
+``` javascript
+console.log(Math.floor(4.567));  // Output: 4
+```
+
+### 4. Combining them
+
+To get a random whole number between 0 and 9, you can use:
+
+``` javascript
+let randomNum = Math.floor(Math.random() * 10);
+console.log(randomNum);  // Output: a random whole number between 0 and 9
+```
+
+### 5. Picking a `Random Element from an Array`
+
+To pick a random element from an `array`, you can use the same concept by multiplying by the `array's length`.
+
+``` javascript
+let fruits = ["Apple", "Banana", "Cherry", "Orange"];
+let randomIndex = Math.floor(Math.random() * fruits.length);
+console.log(fruits[randomIndex]);  // Output: a random fruit like "Banana"
+```
+
+## Summary:
++ `Math.random()` gives a random `decimal between 0 and 1`.
++ Multiply by a number to get a random value in a different range.
++ Use `Math.floor()` to get a `whole number.`
