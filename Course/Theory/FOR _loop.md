@@ -1,4 +1,5 @@
 Loops can execute a block of code a number of times. They’re handy when you want to run the same code repeatedly, adding a different value each time.
+Циклы могут выполнять блок кода несколько раз. Они удобны, когда вы хотите многократно запускать один и тот же код, каждый раз добавляя новое значение.
 
 ```javascript
 for (statement 1; statement 2; statement 3) {
@@ -8,11 +9,11 @@ code block to be executed
 
 And here’s what happens when it runs:
 
-+ Statement 1 is executed before the loop (the code block) starts.
++ Statement 1 is executed before the loop (the code block) starts. // Оператор 1 выполняется перед запуском цикла (блока кода).
 
-+ Statement 2 defines the condition for running the loop (the code block).
++ Statement 2 defines the condition for running the loop (the code block). // Оператор 2 определяет условие для выполнения цикла (блока кода).
 
-+ Statement 3 is executed each time after the loop (the code block) has been executed.
++ Statement 3 is executed each time after the loop (the code block) has been executed. // Оператор 3 выполняется каждый раз после выполнения цикла (блока кода).
 
 ## For example
 
