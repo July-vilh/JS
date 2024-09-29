@@ -6,11 +6,11 @@ JavaScript has three types of loops: `for`, `while`, and `do while`.
 
 1. `for` loop:
 
-`for (statement 1; statement 2; statement 3) {` 
-
-`code block to be executed` 
-
-`}`
+```javascript
+for (statement 1; statement 2; statement 3) {
+code block to be executed
+}
+```
 
 And here’s what happens when it runs:
 
@@ -29,11 +29,11 @@ Now we've got the theory, let's look at a specific example.
 
 This example creates a for loop that prints numbers 1 through 5:
 
-`for (i=1; i<=5; i++) {` 
-
-`console.log(i + "<br />");` 
-
-`}`
+```javascript
+for (i=1; i<=5; i++) {
+console.log(i + "<br />");
+}
+```
 
 So what's actually happening?
 
