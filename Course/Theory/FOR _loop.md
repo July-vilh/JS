@@ -19,10 +19,27 @@ And here’s what happens when it runs:
 ## For example
 
 ```javascript
-for (let i=0; i<=10; i++) {
-console.log(i);
+// Start a for loop, with 'i' initialized to 0.
+// The loop will continue running as long as 'i' is less than or equal to 10.
+// After each iteration, 'i' is incremented by 1.
+
+for (let i = 0; i <= 10; i++) {
+  
+    // On each iteration, the current value of 'i' is printed to the console.
+
+    console.log(i);
+
+    // After printing the value, 'i' is incremented by 1, and the loop continues
+    // until 'i' exceeds 10.
 }
 ```
+
+### Step-by-Step Breakdown:
++ Initialization `(let i = 0)`: The loop starts by declaring and initializing the variable i to 0.
++ Condition `(i <= 10)`: The loop checks if `i` is less than or equal to 10. If true, the loop continues; otherwise, it stops.
++ Action `(console.log(i))`: If the condition is met, the current value of `i` is printed to the console.
++ Increment `(i++)`: After executing the code inside the loop, `i` is incremented by 1.
++ Repeat: The loop repeats this process, printing the new value of `i` and incrementing it, until `i` becomes greater than 10, at which point the loop stops.
 
 ## check only even (четные) numbers
 
