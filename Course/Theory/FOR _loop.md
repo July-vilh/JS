@@ -45,10 +45,27 @@ for (let i = 0; i <= 10; i++) {
 
 ### option1:
 ```javascript
-for (let i=0; i<=10; i+=2) {
-console.log(i);
+// Start a for loop, with 'i' initialized to 0.
+// The loop will continue running as long as 'i' is less than or equal to 10.
+// After each iteration, 'i' is incremented by 2.
+
+for (let i = 0; i <= 10; i += 2) {
+
+    // On each iteration, the current value of 'i' is printed to the console.
+
+    console.log(i);
+
+    // After printing the value, 'i' is incremented by 2, and the loop continues
+    // until 'i' exceeds 10.
 }
 ```
+#### Step-by-Step Breakdown:
++ Initialization `(let i = 0)`: The loop starts by declaring and initializing the variable i to 0.
++ Condition `(i <= 10)`: The loop checks if i is less than or equal to 10. If true, the loop continues; if false, it stops.
++ Action `(console.log(i))`: If the condition is met, the current value of i is printed to the console.
++ Increment `(i += 2)`: After executing the code inside the loop, i is increased by 2, not by 1.
++ Repeat: The loop repeats this process, printing the value of `i` and adding `2` to it each time, until `i` becomes greater than `10`, at which point the loop stops.
++ This results in the even numbers between 0 and 10 being printed to the console: `0, 2, 4, 6, 8, 10`. The key difference is the increment of i by 2 instead of 1, which skips over odd numbers.
 
 ### option2:
 ```javascript
