@@ -22,6 +22,26 @@ console.log(i);
 }
 ```
 
+## check only even (четные) numbers
+
+### option1:
+```javascript
+for (let i=0; i<=10; i+=2) {
+console.log(i);
+}
+```
+
+### option2:
+```javascript
+for (let i=0; i<=10; i++) {
+    if(i%2 === 0) {
+        console.log(i);
+}
+```
+
+Result: 
+
+
 Task 3: Calculate the Sum of Array Elements Using a For Loop
 
 ```javascript
