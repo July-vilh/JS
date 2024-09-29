@@ -103,7 +103,7 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(sum); // Output the total sum to the console
 ```
-Result:
+Result: `16`
 
 ### Explanation:
 
@@ -112,4 +112,29 @@ Result:
 + "For" Loop: The loop runs from 0 to the length of the array `(arr.length)`, which allows it to access each element.
 + Inside the loop, `sum = sum + arr[i] ` adds the current element `(arr[i]) ` to the cumulative `sum`.
 + Output: Finally, `console.log(sum)` prints the total sum to the console.
+
+## Task 4: Calculate the Sum of Odd Numbers from 5 to 15
+
+```javascript
+let sum = 0; // Initialize a variable to hold the sum
+
+// Iterate over the numbers from 5 to 15 using a for loop
+for (let i = 5; i <= 15; i++) {
+    // Check if the current number is odd
+    if (i % 2 !== 0) {
+        sum = sum + i; // Add the odd number to the sum
+    }
+}
+
+console.log(sum); // Output the total sum to the console
+```
+Result: `60`
+
+### Explanation:
+
++ Sum Initialization: A variable `sum` is initialized to 0 to hold the cumulative total of odd numbers.
++ "For" Loop: The loop iterates from `5 to 15` (inclusive).
++ Inside the loop, the condition `if (i % 2 !== 0)` checks if the current number `i` is `odd (not divisible by 2)`.
++ If the `number` is `odd`, `sum = sum + i` adds it to the cumulative sum.
++ Output: Finally, `console.log(sum)` prints the total sum of odd numbers to the console
 
