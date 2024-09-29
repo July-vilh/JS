@@ -42,7 +42,7 @@ for (let i=0; i<=10; i++) {
 Result: 
 
 
-Task 3: Calculate the Sum of Array Elements Using a For Loop
+## Task 3: Calculate the Sum of Array Elements Using a For Loop
 
 ```javascript
 let arr = [3, 5, 8]; // Declare an array with elements 3, 5, and 8
