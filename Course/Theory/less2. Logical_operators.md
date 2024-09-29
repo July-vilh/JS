@@ -20,5 +20,16 @@ Result: Both variables = true (Both conditions (x > 7 and y > 10) are true, so t
 
 ### 2. || (Logical OR):
 
-The || operator returns true if at least one condition is true. It only returns false if both conditions are false.
-It evaluates from left to right and stops as soon as it finds a true value (short-circuiting).
++ The `||` operator returns `true` if at least one condition is true. It only returns `false` if both conditions are false.
++ It evaluates from left to right and stops as soon as it finds a true value (short-circuiting).
+
+```javascript
+let x = 8;
+let y = 11;
+
+if (x > 7 || y > 20) {
+  console.log("at least one condition is true");
+} else {
+  console.log ("all conditions = false") 
+}
+```
