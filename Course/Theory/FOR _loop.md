@@ -57,3 +57,11 @@ console.log(sum); // Output the total sum to the console
 ```
 Result:
 
+### Explanation:
+
++ Array Declaration: An array `arr` is declared with three elements: 3, 5, and 8.
++ Sum Initialization: A variable `sum` is initialized to 0 to hold the cumulative total of the array's elements.
++ "For" Loop: The loop runs from 0 to the length of the array `(arr.length)`, which allows it to access each element.
++ Inside the loop, `sum = sum + arr[i] ` adds the current element `(arr[i]) ` to the cumulative `sum`.
++ Output: Finally, `console.log(sum)` prints the total sum to the console.
+
