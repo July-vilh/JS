@@ -1,0 +1,1 @@
+In JavaScript, objects are collections of properties, where each property consists of a key (also called a property name) and a value. Objects are used to store data in the form of key-value pairs, making them versatile for representing structured data.
