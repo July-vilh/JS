@@ -1,5 +1,5 @@
 
-In JavaScript, the `continue` statement is used within loops (for, while, do...while) to skip the rest of the current iteration and move to the next one.
+In JavaScript, the `continue` statement is used within loops `(for, while, do...while)` to skip the rest of the current iteration and move to the next one.
 
 ## Example 1: Using `continue` in a `for` loop
 
@@ -30,5 +30,8 @@ while (i < 5) {
 + When `continue` is encountered, the `current` iteration of the loop is `stopped`, and the loop moves to the next iteration.
 + It's useful when you want to `skip over certain values or conditions without breaking the entire loop`.
 
+______
+
+n JavaScript, the `break` statement is used to immediately exit a loop `(for, while, do...while)` or a switch statement, stopping further execution of the loop or block.
 
 
