@@ -1,0 +1,1 @@
+The main difference between using a regular for loop and using the for...of loop in JavaScript lies in what each loop accesses when iterating over an array: one prints indexes, and the other prints values (elements).
