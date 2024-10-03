@@ -36,4 +36,24 @@ console.log(isPositive(5));  // true
 console.log(isPositive(-3)); // false
 ```
 
+## Falsy values in JavaScript are values that are considered false in a boolean context, such as:
++ `false`
++ `0`
++ `""` (empty string)
++ `null`
++ `undefined`
++ `NaN` (Not a Number)
+
+### Example:
+
+```javascript
+if (0) {
+    console.log("This won't run."); // 0 is falsy
+}
+
+if ("") {
+    console.log("This won't run either."); // Empty string is falsy
+}
+```
+
 
