@@ -31,6 +31,8 @@ while (i < 5) {
 + It's useful when you want to `skip over certain values or conditions without breaking the entire loop`.
 
 ______
+______
+______
 
 In JavaScript, the `break` statement is used to immediately exit a loop `(for, while, do...while)` or a switch statement, stopping further execution of the loop or block.
 
