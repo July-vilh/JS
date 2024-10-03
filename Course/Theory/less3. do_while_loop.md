@@ -39,3 +39,18 @@ do {
 ```
 `Result: "5"`
 ` Here, the loop runs once even though the condition i < 3 is false, because the condition is checked after the first iteration.`
+______
+## TASK1: "Calculate the sum of the array elements through the do while loop"
+```javascript
+let array = [1, 2, 3, 5];
+let sum = 0
+let i = 0
+
+do {sum = sum + array [i];
+    i++;
+}
+while (i < array.length)
+
+console.log(sum)
+```
+`Result: "11"`
