@@ -32,6 +32,28 @@ while (i < 5) {
 
 ______
 
-n JavaScript, the `break` statement is used to immediately exit a loop `(for, while, do...while)` or a switch statement, stopping further execution of the loop or block.
+In JavaScript, the `break` statement is used to immediately exit a loop `(for, while, do...while)` or a switch statement, stopping further execution of the loop or block.
 
+## Example 1: Using `break` in a `for` loop
+```javascript
+for (let i = 1; i <= 5; i++) {
+    if (i === 3) {
+        break;  // Exits the loop when i is 3
+    }
+    console.log(i);  // Output: 1, 2 (loop stops when i is 3 and don't continue anymore)
+}
+```
+`Result: " 1, 2 (loop stops when i is 3 and don't continue anymore)"`
 
+## Example 2: Using `break` in a `while` loop
+```javascript
+let i = 0;
+while (i < 5) {
+    i++;
+    if (i === 3) {
+        break;  // Exits the loop when i is 3
+    }
+    console.log(i);  // Output: 1, 2 (loop stops when i is 3)
+}
+```
+`Result: "1, 2 (loop stops when i is 3)"`
