@@ -57,3 +57,7 @@ while (i < 5) {
 }
 ```
 `Result: "1, 2 (loop stops when i is 3)"`
+
+## How it works:
++ When `break` is encountered, it immediately stops the execution of the current loop or switch block and jumps to the code following the loop/block.
++ It's useful for exiting loops early based on a condition or stopping further case evaluations in a switch statement.
