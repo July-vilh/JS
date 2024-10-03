@@ -44,7 +44,7 @@ console.log(isPositive(-3)); // false
 + `undefined`
 + `NaN` (Not a Number)
 
-### Example:
+### Example1:
 
 ```javascript
 if (0) {
@@ -56,4 +56,29 @@ if ("") {
 }
 ```
 
+### Example2:
 
+```javascript
+let x = 8;
+let y = 11;
+
+if (x > 7 || y > 20) {
+  console.log("at least one condition is true");
+} else {
+  console.log ("all conditions = false") 
+}
+```
+` Result: "at least one condition is true"`
+
+### Example3:
+```javascript
+let x = 8;
+let y = 11;
+
+if (x > 9 || y > 20) {
+  console.log("at least one condition is true");
+} else {
+  console.log ("all conditions = false") 
+}
+```
+` Result: "all conditions = false" `
