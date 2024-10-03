@@ -4,10 +4,10 @@ In JavaScript, the `continue` statement is used within loops (for, while, do...w
 ## Example 1: Using `continue` in a `for` loop
 
 ```javascript
-for (let i = 1; i <= 5; i++) {
+for (let i = 0; i < 5; i++) {
     if (i === 3) {
         continue;  // Skips the iteration when i is 3
     }
-    console.log(i);  // Output: 1, 2, 4, 5 (3 is skipped)
+    console.log(i);  // Output: 0, 1, 2, 4 (3 is skipped)
 }
 ```
