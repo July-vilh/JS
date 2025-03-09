@@ -51,3 +51,23 @@ console.log(getOdd([0]));
 console.log(getOdd([1, 1, 2]));
 console.log(getOdd([0, 1, 0, 1, 0]));
 console.log(getOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
+
+//TODO: Task 3
+/*
+Напишите функцию, которая принимает на вход массив целых чисел 
+и возвращает отсортированный массив по следующему критерию: 
+ - количество цифр в числе.
+ */
+const arr = [123, 4565565, 1, 241234124124, 12, 5656, 12];
+function SortArray(arr) {
+  const array = [...arr];
+  return array.sort((a, b) => {
+    const NumberOfDigitsInA = String(a).length;
+    const NumberOfDigitsInB = String(b).length;
+    return NumberOfDigitsInA - NumberOfDigitsInB;
+  });
+}
+
+// variant2:
+// return array.sort((a, b) => String(a).length - String(b).length);
+console.log(SortArray(arr));
