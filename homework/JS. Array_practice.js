@@ -30,3 +30,24 @@ Examples
 [0,1,0,1,0] should return 0, because it occurs 3 times (which is odd).
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 */
+
+// variant1
+function getOdd(arr = []) {
+  return arr.find((num, index, array) => {
+    const arrayOfNums = array.filter((el) => el === num);
+    const length = arrayOfNums.length;
+    return length % 2;
+  });
+}
+
+// variant2
+
+return arr.find(
+  (num, index, array) => array.filter((el) => el === num).length % 2
+);
+
+console.log(getOdd([7]));
+console.log(getOdd([0]));
+console.log(getOdd([1, 1, 2]));
+console.log(getOdd([0, 1, 0, 1, 0]));
+console.log(getOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
