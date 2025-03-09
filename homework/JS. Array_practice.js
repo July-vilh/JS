@@ -179,3 +179,27 @@ function topNElements(arr, n) {
 
 console.log(topNElements([10, 5, 8, 3, 12, 15], 3)); // [15, 12, 10]
 console.log(topNElements([1, 2, 3, 4, 5], 2)); // [5, 4]
+
+//TODO: Task 11
+/* Напиши функцию productExceptSelf, которая принимает массив чисел и возвращает массив, 
+где каждый элемент равен произведению всех остальных элементов массива (без учёта текущего элемента).
+*/
+
+function productExceptSelf(arr) {
+  return arr.map((_, index, array) => {
+    return array.reduce((result, element, i) => {
+      if (index !== i) {
+        return result * element;
+      }
+      return result;
+    }, 1);
+  });
+}
+
+console.log(productExceptSelf([1, 2, 3, 4])); // [24, 12, 8, 6]
+console.log(productExceptSelf([5, 3, 4, 2])); // [24, 40, 30, 60]
+
+// variant2
+return arr.map((number, i, array) =>
+  array.reduce((total, value) => (number === value ? total : total * value), 1)
+);
