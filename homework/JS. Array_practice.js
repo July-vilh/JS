@@ -58,9 +58,9 @@ console.log(getOdd([1, 2, 2, 3, 3, 3, 4, 3, 3, 3, 2, 2, 1]));
 и возвращает отсортированный массив по следующему критерию: 
  - количество цифр в числе.
  */
-const arr = [123, 4565565, 1, 241234124124, 12, 5656, 12];
-function SortArray(arr) {
-  const array = [...arr];
+const arr1 = [123, 4565565, 1, 241234124124, 12, 5656, 12];
+function SortArray(arr1) {
+  const array = [...arr1];
   return array.sort((a, b) => {
     const NumberOfDigitsInA = String(a).length;
     const NumberOfDigitsInB = String(b).length;
@@ -70,7 +70,7 @@ function SortArray(arr) {
 
 // variant2:
 return array.sort((a, b) => String(a).length - String(b).length);
-console.log(SortArray(arr));
+console.log(SortArray(arr1));
 
 //TODO: Task 4
 
@@ -94,3 +94,18 @@ function moveZeros(arr) {
 где в каждом числе переставлены цифры так, 
 чтобы число получилось максимально возможным, например: 1234 => 4321
 */
+
+const arr2 = [123, 542, 968, 352, 1, 308];
+console.log(getGreatestTransformedNumbers(arr2));
+
+function getGreatestTransformedNumbers(arr2) {
+  return arr2.map((num) => {
+    const ArrayOfNums = String(num).split(""); // [123] теперь ['1', '2', '3']
+    const SortedArrayOfNums = ArrayOfNums.sort((a, b) => +b - +a); //cортирует в порядке убывания: ['3', '2', '1']
+    const NewNum = +SortedArrayOfNums.join(""); // `321` -> 321
+    return NewNum;
+  });
+}
+
+// variant2
+return arr2.map((num) => +[...num.toString()].sort((a, b) => +b - +a).join(""));
