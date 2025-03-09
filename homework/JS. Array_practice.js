@@ -169,3 +169,13 @@ function sumAboveAverage(arr = []) {
 
 console.log(sumAboveAverage([1, 2, 3, 4, 5])); // 9 (4 + 5)
 console.log(sumAboveAverage([10, 20, 30])); // 30 (30)
+
+//TODO: Task 10
+//Напиши функцию topNElements, которая принимает массив чисел и число n, и возвращает n наибольших элементов.
+
+function topNElements(arr, n) {
+  return [...arr].sort((a, b) => b - a).slice(0, n);
+}
+
+console.log(topNElements([10, 5, 8, 3, 12, 15], 3)); // [15, 12, 10]
+console.log(topNElements([1, 2, 3, 4, 5], 2)); // [5, 4]
