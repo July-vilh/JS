@@ -154,3 +154,18 @@ function findFirstGreaterThanTen(arr) {
 
 console.log(findFirstGreaterThanTen([1, 4, 10, 15, 20])); // 3
 console.log(findFirstGreaterThanTen([1, 2, 3])); // -1
+
+//TODO: Task 9
+/*
+Напиши функцию sumAboveAverage, которая принимает массив чисел и возвращает сумму всех элементов, 
+которые больше среднего арифметического.
+*/
+
+function sumAboveAverage(arr = []) {
+  const avg = arr.reduce((result, element) => result + element, 0) / arr.length; //среднее всех элементов
+  const aboveAvg = arr.filter((el) => el > avg); //отфильтровали элементы что больше среднего
+  return aboveAvg.reduce((result, element) => result + element, 0); //сумма всех элементов что больше среднего (avg)
+}
+
+console.log(sumAboveAverage([1, 2, 3, 4, 5])); // 9 (4 + 5)
+console.log(sumAboveAverage([10, 20, 30])); // 30 (30)
