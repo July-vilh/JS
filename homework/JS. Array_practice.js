@@ -109,3 +109,25 @@ function getGreatestTransformedNumbers(arr2) {
 
 // variant2
 return arr2.map((num) => +[...num.toString()].sort((a, b) => +b - +a).join(""));
+
+//TODO: 6
+
+/**
+Напиши функцию allPositive, которая проверяет, являются ли все элементы массива положительными числами. 
+Возвращает true или false.
+ */
+
+function allPositive(arr = [], isPositive = true) {
+  return arr.every((el) => (isPositive ? el >= 0 : el <= 0));
+}
+
+console.log(allPositive([3, 5, 2, 8], true)); // true
+console.log(allPositive([3, -1, 2, 8], true)); // false
+console.log(allPositive([-3, -1, -2, -8], false)); // true
+console.log(allPositive([-3, 1, -2, -8], false)); // false
+
+//TODO: Task 7
+/*
+Напиши функцию findMax, которая принимает массив чисел и возвращает наибольшее число.
+Решить без Math.max с помощью reduce
+*/
