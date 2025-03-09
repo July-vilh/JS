@@ -69,5 +69,28 @@ function SortArray(arr) {
 }
 
 // variant2:
-// return array.sort((a, b) => String(a).length - String(b).length);
+return array.sort((a, b) => String(a).length - String(b).length);
 console.log(SortArray(arr));
+
+//TODO: Task 4
+
+/*
+Write an algorithm that takes an array and moves all of the zeros to the end, 
+preserving the order of the other elements.
+*/
+
+console.log(moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])); // returns[false,1,1,2,1,3,"a",0,0]
+
+function moveZeros(arr) {
+  const ArrWithoutZero = arr.filter((el) => el !== 0);
+  const ArrWithZero = arr.filter((el) => el === 0);
+  const result = [...ArrWithoutZero, ...ArrWithZero];
+  return result;
+}
+
+//TODO: Task 5
+/*
+Напишите функцию, которая принимает массив чисел и возвращает новый массив, 
+где в каждом числе переставлены цифры так, 
+чтобы число получилось максимально возможным, например: 1234 => 4321
+*/
