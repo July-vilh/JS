@@ -1,5 +1,4 @@
 //TODO: Task 1
-
 /**
  * У вас есть массив с ценами товаров в чеке. В консоль нужно вывести сумму всех цен и среднюю цену товара.
   Итого: 8495 $, средняя цена товара 700 $ - пример сообщения в консоле.  
@@ -73,7 +72,6 @@ return array.sort((a, b) => String(a).length - String(b).length);
 console.log(SortArray(arr1));
 
 //TODO: Task 4
-
 /*
 Write an algorithm that takes an array and moves all of the zeros to the end, 
 preserving the order of the other elements.
@@ -111,7 +109,6 @@ function getGreatestTransformedNumbers(arr2) {
 return arr2.map((num) => +[...num.toString()].sort((a, b) => +b - +a).join(""));
 
 //TODO: 6
-
 /**
 Напиши функцию allPositive, которая проверяет, являются ли все элементы массива положительными числами. 
 Возвращает true или false.
@@ -134,12 +131,26 @@ console.log(allPositive([-3, 1, -2, -8], false)); // false
 
 function findMax(arr) {
   return arr.reduce((result, element) => {
-    if (element > result){
+    if (element > result) {
       result = element;
     }
     return result;
-  }, arr[0])
+  }, arr[0]);
 }
 
 console.log(findMax([3, 1, 7, 9, 5])); // 9
 console.log(findMax([-10, -3, -5, -1])); // -1
+
+//TODO: Task 8
+/*
+Напиши функцию findFirstGreaterThanTen, которая принимает массив чисел 
+и возвращает индекс первого элемента, который больше 10. 
+Если такого элемента нет, вернуть -1.
+*/
+
+function findFirstGreaterThanTen(arr) {
+  return arr.findIndex((num) => num > 10);
+}
+
+console.log(findFirstGreaterThanTen([1, 4, 10, 15, 20])); // 3
+console.log(findFirstGreaterThanTen([1, 2, 3])); // -1
