@@ -118,7 +118,7 @@ return arr2.map((num) => +[...num.toString()].sort((a, b) => +b - +a).join(""));
  */
 
 function allPositive(arr = [], isPositive = true) {
-  return arr.every((el) => (isPositive ? el >= 0 : el <= 0));
+  return arr.every((el) => (isPositive ? el >= 0 : el < 0));
 }
 
 console.log(allPositive([3, 5, 2, 8], true)); // true
@@ -131,3 +131,15 @@ console.log(allPositive([-3, 1, -2, -8], false)); // false
 Напиши функцию findMax, которая принимает массив чисел и возвращает наибольшее число.
 Решить без Math.max с помощью reduce
 */
+
+function findMax(arr) {
+  return arr.reduce((result, element) => {
+    if (element > result){
+      result = element;
+    }
+    return result;
+  }, arr[0])
+}
+
+console.log(findMax([3, 1, 7, 9, 5])); // 9
+console.log(findMax([-10, -3, -5, -1])); // -1
