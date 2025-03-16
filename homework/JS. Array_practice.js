@@ -206,3 +206,9 @@ console.log(getCentury(1600)); //16
 console.log(getCentury(200)); //2
 console.log(getCentury(199)); //2
 console.log(getCentury(201)); //3
+
+// 13
+const arr = [1, 2, 3]; // Создаем массив [1, 2, 3]
+const sliced = arr.slice(1); // Делаем копию части массива, начиная с индекса 1: [2, 3]
+sliced.push(4); // Добавляем 4 в конец массива sliced: [2, 3, 4]
+console.log(sliced.length); // Выводим длину массива sliced
