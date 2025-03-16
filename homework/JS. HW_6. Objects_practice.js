@@ -114,3 +114,14 @@ function showLibraries() {
   });
 }
 showLibraries();
+
+// 2. Write a function that takes one argument (section ID or section name) 
+// and returns the library to which the section belongs.
+console.log(getLibrary(4)); // Central Library
+console.log(getLibrary("Romance")); // Community Library
+
+function getLibrary(nameOrId) {
+  const found = libraries.find((library) => library.sections.find((section) => nameOrId === section.name || nameOrId === section.id));
+  if(!found) throw new Error("No libraries found by given name or id");
+  return found;
+}
