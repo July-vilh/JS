@@ -176,7 +176,20 @@ showLibraries()
 editLibrary(1, "New Library Name");
 
 function editLibrary(idOrName, newName) {
-  const foundLibrary2 = libraries.find((library) => library.id === idOrName || library.name === idOrName);
-  if (!foundLibrary2) throw new Error("Library not found by given ID");
-  foundLibrary2.name = newName;
+  const foundLibrary = libraries.find((library) => library.id === idOrName || library.name === idOrName);
+  if (!foundLibrary) throw new Error("Library not found by given ID");
+  foundLibrary.name = newName;
+}
+
+// 6. Write a function to edit the name of a section. The function should accept the section ID and the new name of the section as arguments.
+editSection(7, "New Section Name");
+function editSection(sectionIdOrName, newName) {
+  const section = findSection(sectionIdOrName);
+  section.name = newName;
+}
+
+function findSection(idOrName){
+  const foundLibrary = getLibrary(idOrName);
+  const foundSection = foundLibrary.sections.find(section => section.id === idOrName || section.name === idOrName);
+  return foundSection;
 }
