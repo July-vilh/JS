@@ -138,6 +138,7 @@ function addLibrary(name){
   };
   libraries.push(newLibrary);
 }
+
 function getNewId(){
   return (libraries.reduce((max, library) => {
     if (library.id > max){
@@ -151,3 +152,22 @@ function getNewId(){
     return max;
   }, 0) + 1);
 }
+
+//4. Write a function to add a section to a library. The function should accept the library ID and the name of the section as arguments.
+addSection(1, "New Section");
+console.log(libraries);
+
+function addSection(libraryId, sectionName) {
+  const foundLibrary = libraries.find((library) => library.id === libraryId);
+  if (!foundLibrary) throw new Error("Library not found by given ID");
+
+
+  const newSection = {
+    id: getNewId(),
+    name: sectionName,
+    books_count: 0,
+  };
+  foundLibrary.sections.push(newSection);
+}
+
+showLibraries()
