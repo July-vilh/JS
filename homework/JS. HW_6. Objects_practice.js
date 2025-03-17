@@ -171,3 +171,12 @@ function addSection(libraryId, sectionName) {
 }
 
 showLibraries()
+
+// 5. Write a function to edit the name of a library. The function should accept the library ID and the new name of the library as arguments.
+editLibrary(1, "New Library Name");
+
+function editLibrary(idOrName, newName) {
+  const foundLibrary2 = libraries.find((library) => library.id === idOrName || library.name === idOrName);
+  if (!foundLibrary2) throw new Error("Library not found by given ID");
+  foundLibrary2.name = newName;
+}
