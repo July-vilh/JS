@@ -125,3 +125,29 @@ function getLibrary(nameOrId) {
   if(!found) throw new Error("No libraries found by given name or id");
   return found;
 }
+
+// 3. Write a function to add a new library. The function should accept the name of the library as an argument.
+addLibrary("New Library");
+console.log(libraries);
+
+function addLibrary(name){
+  const newLibrary = {
+    id: getNewId(),
+    name,
+    sections: [],
+  };
+  libraries.push(newLibrary);
+}
+function getNewId(){
+  return (libraries.reduce((max, library) => {
+    if (library.id > max){
+      max = library.id;
+    }
+    library.sections.forEach((section) => {
+      if (section.id > max){
+        max = section.id;
+      }
+    });
+    return max;
+  }, 0) + 1);
+}
