@@ -202,3 +202,13 @@ function deleteLibrary(id) {
   if (index === -1) throw new Error("Library not found by given ID");
   libraries.splice(index, 1);
 }
+
+//8. Write a function to delete a section. The function should accept the section ID as an argument. A section can only be deleted if it has no books.
+deleteSection(3);
+
+function deleteSection(sectionId) {
+  const foundLibrary = getLibrary(sectionId);
+  const index = foundLibrary.sections.findIndex(section => section.id === sectionId);
+  if (index === -1) throw new Error("Section not found by given ID");
+  foundLibrary.sections.splice(index, 1);
+}
