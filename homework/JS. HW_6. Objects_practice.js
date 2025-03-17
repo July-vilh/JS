@@ -193,3 +193,12 @@ function findSection(idOrName){
   const foundSection = foundLibrary.sections.find(section => section.id === idOrName || section.name === idOrName);
   return foundSection;
 }
+
+// 7. Write a function to delete a library. The function should accept the library ID as an argument.
+deleteLibrary(1);
+
+function deleteLibrary(id) {
+  const index = libraries.findIndex(library => library.id === id);
+  if (index === -1) throw new Error("Library not found by given ID");
+  libraries.splice(index, 1);
+}
