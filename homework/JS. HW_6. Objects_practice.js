@@ -297,3 +297,16 @@ function getKeysUpper(obj) {
   return Object.entries(obj).map(([key, value]) => `key ${key} = ${value}`);
  }
  console.log(getKeysAndValues(obj));
+
+ //task9. Вывести метод который вернет полное имя
+ const obj3 = {
+   name: "John",
+   lastName: "Doe",
+   age: 18,
+   hobbies: ["travelling", "gaming", "coding"],
+   getFullName() {
+     return `${this.name} ${this.lastName}`;
+   },
+ };
+
+ console.log(obj3.getFullName());
