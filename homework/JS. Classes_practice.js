@@ -50,12 +50,16 @@
 class Animal {
   constructor(type, color, weight, height, placeOfOrigin){
     this.type = type;
-    this.color = color;
+    this._color = color;
     this.weight = weight;
     this.height = height;
     this.placeOfOrigin = placeOfOrigin;
   }
   getInfo(){
     return `Type: ${this.type}\nColor: ${this.color}\nWeight: ${this.weight}\nHeight: ${this.height}\nPlace of origin: ${this.placeOfOrigin}`;
+  }
+
+  get color(){
+    return this._color;
   }
 }
