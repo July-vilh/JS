@@ -18,8 +18,8 @@
 // 6. Создайте класс Snake, который будет наследовать класс Animal
 // 7. Создайте конструктор в классе Snake, который будет принимать все необходимые поля из класса Animal, а также поле isPoisonous
 // 8. С помощью super() вызовите конструктор родителя, передав необходимые параметры
-// 9. В классе Snake создать метод checkPoisonous(), который возвращает true/false
-// 10. Сделайте поле isPoisonous приватным в классе Snake
+// === 9. В классе Snake создать метод checkPoisonous(), который возвращает true/false ====
+// === 10. Сделайте поле isPoisonous приватным в классе Snake ====
 
 // Task 2.
 // 1. Создайте класс Bird с приватным полем isFlying, отнаследовавшись от Animal
@@ -85,3 +85,11 @@ class Snake extends Animal {
     this.isPoisonous = isPoisonous;
   }
 }
+
+class Bird extends Animal {
+  constructor(type, color, weight, height, placeOfOrigin, isFlying){
+    super(type, color, weight, height, placeOfOrigin);
+    this.isFlying = isFlying;
+  }
+}
+
