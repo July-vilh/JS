@@ -49,12 +49,13 @@
 
 class Animal {
   #color;
-  constructor(type, color, weight, height, placeOfOrigin) {
+  constructor(type, color, weight, height, placeOfOrigin, name) {
     this.type = type;
     this.#color = color;
     this.weight = weight;
     this.height = height;
     this.placeOfOrigin = placeOfOrigin;
+    this.name = name;
   }
   getInfo() {
     return `Type: ${this.type}\nColor: ${this.color}\nWeight: ${this.weight}\nHeight: ${this.height}\nPlace of origin: ${this.placeOfOrigin}`;
@@ -80,22 +81,22 @@ class Animal {
 }
 
 class Snake extends Animal {
-  constructor(type, color, weight, height, placeOfOrigin, isPoisonous){
-    super(type, color, weight, height, placeOfOrigin);
+  constructor(type, color, weight, height, placeOfOrigin, isPoisonous, name){
+    super(type, color, weight, height, placeOfOrigin, name);
     this.isPoisonous = isPoisonous;
   }
 }
 
 class Bird extends Animal {
-  constructor(type, color, weight, height, placeOfOrigin, isFlying){
-    super(type, color, weight, height, placeOfOrigin);
+  constructor(type, color, weight, height, placeOfOrigin, isFlying, name){
+    super(type, color, weight, height, placeOfOrigin, name);
     this.isFlying = isFlying;
   }
 }
 
 class CatLike extends Animal {
-  constructor(type, color, weight, height, placeOfOrigin, isSafeToPet){
-    super(type, color, weight, height, placeOfOrigin);
+  constructor(type, color, weight, height, placeOfOrigin, isSafeToPet, name){
+    super(type, color, weight, height, placeOfOrigin, name);
     this.isSafeToPet = isSafeToPet;
   }
 }
@@ -114,6 +115,9 @@ class Zoo {
     }
     this.#animals.push(animal);
   }
+  removeAnimal(animalName){
+    
+  }
 
 }
 
@@ -124,7 +128,7 @@ const snake = new Snake("Snake", "black", 1, 1, "Russia", "Kaa", true);
 const cat = new CatLike("Cat", "black", 1, 1, "Russia", "Boris", true);
 
 zoo.setAnimal(bird);
-zoo.setAnimal(new Bird("Bird", "black", 2, 3, "USA", false));
+zoo.setAnimal(new Bird("Bird", "black", 2, 3, "USA", false, "Kolibri"));
 zoo.setAnimal(cat);
 console.log(zoo);
 
