@@ -261,3 +261,17 @@ function compareObjects(obj1, obj2) {
   return true;
 }
 console.log(compareObjects(obj1, obj2));
+
+// Task6
+// функция которая выведет массив ключей приведенных к верхнему регистру
+const obj = {
+   name: "John",
+   lastName: "Doe",
+   age: 18,
+   hobbies: ["travelling", "gaming", "coding"],
+ };
+
+ function getKeysUpper(obj) {
+  return Object.keys(obj).map(key => key.toUpperCase());
+ }
+ console.log(getKeysUpper(obj));
