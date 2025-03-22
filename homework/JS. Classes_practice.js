@@ -93,3 +93,10 @@ class Bird extends Animal {
   }
 }
 
+class CatLike extends Animal {
+  constructor(type, color, weight, height, placeOfOrigin, isSafeToPet){
+    super(type, color, weight, height, placeOfOrigin);
+    this.isSafeToPet = isSafeToPet;
+  }
+}
+
