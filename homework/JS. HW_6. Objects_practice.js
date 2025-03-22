@@ -253,5 +253,11 @@ const obj1 = { a: 1, b: 2 };
 const obj2 = { a: 1, b: 2, c: 3 };
 
 function compareObjects(obj1, obj2) {
-  
+  if(Object.keys(obj1).length !== Object.keys(obj2))return false; //совпадает ли кол-во ключей
+  for(const key in obj1) {
+    if(!(key in obj2)) return false; //каждый из наших проверяемых ключей должен быть и в одном и во втором объекте
+    if(obj1[key] !== obj2[key]) return false; //если хоть раз 1 значение не совпадает с другим то false
+  }
+  return true;
 }
+console.log(compareObjects(obj1, obj2));
