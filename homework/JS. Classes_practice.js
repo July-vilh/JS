@@ -50,7 +50,7 @@
 class Animal {
   constructor(type, color, weight, height, placeOfOrigin){
     this.type = type;
-    this._color = color;
+    this.color = color;
     this.weight = weight;
     this.height = height;
     this.placeOfOrigin = placeOfOrigin;
@@ -61,5 +61,12 @@ class Animal {
 
   get color(){
     return this._color;
+  }
+
+  set color(newColor){
+    if(!color || typeof color !== "string"){
+      throw new Error("Color must be a string");
+    }
+    this._color = newColor;
   }
 }
