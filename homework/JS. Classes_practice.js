@@ -101,7 +101,7 @@ class CatLike extends Animal {
   }
 }
 
-class Worker {
+class ZooWorker {
   constructor(firstName, lastName, phone) {
     this.firstName = firstName;
     this.lastName = lastName;
@@ -156,7 +156,12 @@ const snake = new Snake("Snake", "black", 1, 1, "Russia", "Kaa", true);
 const cat = new CatLike("Cat", "black", 1, 1, "Russia", "Boris", true);
 
 zoo.setAnimal(bird);
-zoo.setAnimal(new Bird("Bird", "black", 2, 3, "USA", false, "Kolibri"));
+zoo.setAnimal(new Bird("Bird", "black", 2, 3, "USA", "Kolibri", false));
+zoo.setAnimal(snake);
 zoo.setAnimal(cat);
 zoo.removeAnimal("Kolibri");
+zoo.setWorker(new ZooWorker("Ivan", "Ivanov", "8-800-555-35-35"));
+zoo.setWorker(new ZooWorker("Petr", "Petrov", "8-800-555-35-35"));
+zoo.setWorker(new ZooWorker("Sidor", "Sidorov", "8-800-555-35-35"));
 console.log(zoo.showAnimals());
+console.log(zoo.showWorkers());
