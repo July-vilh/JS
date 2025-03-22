@@ -212,3 +212,20 @@ function deleteSection(sectionId) {
   if (index === -1) throw new Error("Section not found by given ID");
   foundLibrary.sections.splice(index, 1);
 }
+
+//9. Write a function to transfer books between sections within the same library.
+// The function should accept two section IDs (from which the books will be transferred and to which they will be transferred) as arguments.
+transferBooks(2, 4);
+
+function transferBooks(sectionIDFrom, sectionIDTo) {
+    const libraryFrom = getLibrary(sectionIDFrom);
+    const libraryTo = getLibrary(sectionIDTo);
+    if (libraryFrom !== libraryTo){
+      throw new Error("Unable to transfer books from different libraries");
+    }
+
+    const sectionFrom = findSection(sectionIDFrom);
+    const sectionTo = findSection(sectionIDTo);
+    sectionTo.books_count += sectionFrom.books_count;
+    sectionFrom.books_count = 0;
+}
