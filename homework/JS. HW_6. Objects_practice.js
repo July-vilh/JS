@@ -229,3 +229,14 @@ function transferBooks(sectionIDFrom, sectionIDTo) {
     sectionTo.books_count += sectionFrom.books_count;
     sectionFrom.books_count = 0;
 }
+
+//TODO: Task 4. Насписать функцию которая возвращает ключ объекта по его значению
+
+function findKeyByValue(obj, value) {
+  const entries = Object.entries(obj);
+  const foundEntry = entries.find(array => array[1] === value);
+  if(!foundEntry) throw new Error("Not found key by provided value");
+  return foundEntry[0];
+}
+
+console.log(findKeyByValue({ a: 1, b: 2, c: 3 }, 2)); //b
