@@ -101,21 +101,32 @@ class CatLike extends Animal {
 }
 
 class Zoo {
+  #animals = [];
   constructor(address, title, ticketPrice){
     this.address = address;
     this.title = title;
     this.ticketPrice = ticketPrice;
     this.workers = [];
-    this.animals = [];
   }
   setAnimal(animal){
     if(!(animal instanceof Animal)) {
       throw new Error("Animal must be an instance of Animal");
     }
-    this.animals.push(animal);
+    this.#animals.push(animal);
   }
 
 }
+
+const zoo = new Zoo("1st avenue", "Zoo", 10);
+
+const bird = new Bird("Bird", "black", 1, 1, "Russia", "Kakadu", true);
+const snake = new Snake("Snake", "black", 1, 1, "Russia", "Kaa", true);
+const cat = new CatLike("Cat", "black", 1, 1, "Russia", "Boris", true);
+
+zoo.setAnimal(bird);
+zoo.setAnimal(new Bird("Bird", "black", 2, 3, "USA", false));
+zoo.setAnimal(cat);
+console.log(zoo);
 
 
 
