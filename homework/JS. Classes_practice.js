@@ -48,24 +48,31 @@
 // 8. Добавьте методы removeWorker() и removeAnimal() // Подумайте, как будем удалять, по какому полю будем выбирать:)
 
 class Animal {
-  constructor(type, color, weight, height, placeOfOrigin){
+  constructor(type, color, weight, height, placeOfOrigin) {
     this.type = type;
     this.color = color;
     this.weight = weight;
     this.height = height;
     this.placeOfOrigin = placeOfOrigin;
   }
-  getInfo(){
+  getInfo() {
     return `Type: ${this.type}\nColor: ${this.color}\nWeight: ${this.weight}\nHeight: ${this.height}\nPlace of origin: ${this.placeOfOrigin}`;
   }
 
-  get color(){
+  get color() {
     return this._color;
   }
 
-  set color(newColor){
-    if(!color || typeof color !== "string"){
+  set color(newColor) {
+    if (!color || typeof color !== "string") {
       throw new Error("Color must be a string");
+    } else if (
+      color !== "red" &&
+      color !== "black" &&
+      color !== "white" &&
+      color !== "blue"
+    ) {
+      throw new Error("Color must be red, black, white or blue");
     }
     this._color = newColor;
   }
