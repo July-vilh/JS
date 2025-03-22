@@ -81,21 +81,21 @@ class Animal {
 }
 
 class Snake extends Animal {
-  constructor(type, color, weight, height, placeOfOrigin, isPoisonous, name){
+  constructor(type, color, weight, height, placeOfOrigin, isPoisonous, name) {
     super(type, color, weight, height, placeOfOrigin, name);
     this.isPoisonous = isPoisonous;
   }
 }
 
 class Bird extends Animal {
-  constructor(type, color, weight, height, placeOfOrigin, isFlying, name){
+  constructor(type, color, weight, height, placeOfOrigin, isFlying, name) {
     super(type, color, weight, height, placeOfOrigin, name);
     this.isFlying = isFlying;
   }
 }
 
 class CatLike extends Animal {
-  constructor(type, color, weight, height, placeOfOrigin, isSafeToPet, name){
+  constructor(type, color, weight, height, placeOfOrigin, isSafeToPet, name) {
     super(type, color, weight, height, placeOfOrigin, name);
     this.isSafeToPet = isSafeToPet;
   }
@@ -103,22 +103,28 @@ class CatLike extends Animal {
 
 class Zoo {
   #animals = [];
-  constructor(address, title, ticketPrice){
+  constructor(address, title, ticketPrice) {
     this.address = address;
     this.title = title;
     this.ticketPrice = ticketPrice;
     this.workers = [];
   }
-  setAnimal(animal){
-    if(!(animal instanceof Animal)) {
+  setAnimal(animal) {
+    if (!(animal instanceof Animal)) {
       throw new Error("Animal must be an instance of Animal");
     }
     this.#animals.push(animal);
   }
-  removeAnimal(animalName){
-    
+  removeAnimal(animalName) {
+    this.#animals.splice(
+      this.#animals.findIndex(({ name }) => name === animalName),
+      1
+    );
   }
 
+  showAnimals() {
+    return this.#animals;
+  }
 }
 
 const zoo = new Zoo("1st avenue", "Zoo", 10);
@@ -130,7 +136,5 @@ const cat = new CatLike("Cat", "black", 1, 1, "Russia", "Boris", true);
 zoo.setAnimal(bird);
 zoo.setAnimal(new Bird("Bird", "black", 2, 3, "USA", false, "Kolibri"));
 zoo.setAnimal(cat);
-console.log(zoo);
-
-
-
+zoo.removeAnimal("Kolibri");
+console.log(zoo.showAnimals());
