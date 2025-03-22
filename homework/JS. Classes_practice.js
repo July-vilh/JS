@@ -101,13 +101,24 @@ class CatLike extends Animal {
   }
 }
 
+class Worker {
+  constructor(firstName, lastName, phone) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.phone = phone;
+  }
+  getFullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
 class Zoo {
   #animals = [];
+  #workers = [];
   constructor(address, title, ticketPrice) {
     this.address = address;
     this.title = title;
     this.ticketPrice = ticketPrice;
-    this.workers = [];
   }
   setAnimal(animal) {
     if (!(animal instanceof Animal)) {
@@ -124,6 +135,17 @@ class Zoo {
 
   showAnimals() {
     return this.#animals;
+  }
+
+  setWorker(worker) {
+    if (!(worker instanceof ZooWorker)) {
+      throw new Error("Worker must be an instance of Worker");
+    }
+    this.#workers.push(worker);
+  }
+
+  showWorkers() {
+    return this.#workers;
   }
 }
 
