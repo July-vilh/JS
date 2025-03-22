@@ -48,9 +48,10 @@
 // 8. Добавьте методы removeWorker() и removeAnimal() // Подумайте, как будем удалять, по какому полю будем выбирать:)
 
 class Animal {
+  #color;
   constructor(type, color, weight, height, placeOfOrigin) {
     this.type = type;
-    this.color = color;
+    this.#color = color;
     this.weight = weight;
     this.height = height;
     this.placeOfOrigin = placeOfOrigin;
@@ -60,7 +61,7 @@ class Animal {
   }
 
   get color() {
-    return this._color;
+    return this.#color;
   }
 
   set color(newColor) {
@@ -74,6 +75,13 @@ class Animal {
     ) {
       throw new Error("Color must be red, black, white or blue");
     }
-    this._color = newColor;
+    this.#color = newColor;
+  }
+}
+
+class Snake extends Animal {
+  constructor(type, color, weight, height, placeOfOrigin, isPoisonous){
+    super(type, color, weight, height, placeOfOrigin);
+    this.isPoisonous = isPoisonous;
   }
 }
