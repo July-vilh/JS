@@ -24,7 +24,7 @@
 // Task 2.
 // 1. Создайте класс Bird с приватным полем isFlying, отнаследовавшись от Animal
 // 2. Создайте класс CatLike с публичным полем isSafeToPet, отнаследовавшись от Animal
-// 3. Создайте класс Worker, реализующий следующий интерфейс (набор полей и методов):
+// === 3. Создайте класс Worker, реализующий следующий интерфейс (набор полей и методов):
 //     class Worker
 //       firstName
 //       lastName
@@ -97,6 +97,16 @@ class CatLike extends Animal {
   constructor(type, color, weight, height, placeOfOrigin, isSafeToPet){
     super(type, color, weight, height, placeOfOrigin);
     this.isSafeToPet = isSafeToPet;
+  }
+}
+
+class Zoo {
+  constructor(address, title, ticketPrice){
+    this.address = address;
+    this.title = title;
+    this.ticketPrice = ticketPrice;
+    this.workers = [];
+    this.animals = [];
   }
 }
 
