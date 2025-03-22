@@ -271,7 +271,22 @@ const obj = {
    hobbies: ["travelling", "gaming", "coding"],
  };
 
- function getKeysUpper(obj) {
+function getKeysUpper(obj) {
   return Object.keys(obj).map(key => key.toUpperCase());
  }
  console.log(getKeysUpper(obj));
+
+ // task7
+ // получение всех значений из объекта как строки и если это массив то строки дб разбиты через запятую с пробелом
+ function getValuesAsStrings(obj) {
+  return Object.values(obj).map(value => {
+    if(Array.isArray(value)){
+      return value.join(", ")
+    }
+    if(typeof(value) === 'number'){
+      return value.toString();
+    }
+    return value;
+  })
+ }
+ console.log(getValuesAsStrings(obj));
