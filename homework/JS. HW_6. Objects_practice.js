@@ -231,7 +231,7 @@ function transferBooks(sectionIDFrom, sectionIDTo) {
 }
 
 //TODO: Task 4. Насписать функцию которая возвращает ключ объекта по его значению
-
+// variant1
 function findKeyByValue(obj, value) {
   const entries = Object.entries(obj);
   const foundEntry = entries.find(array => array[1] === value);
@@ -239,4 +239,19 @@ function findKeyByValue(obj, value) {
   return foundEntry[0];
 }
 
+//variant2
+function findKeyByValue(obj, value) {
+ return Object.keys(obj).find((key) => obj[key] === value);
+}
+
 console.log(findKeyByValue({ a: 1, b: 2, c: 3 }, 2)); //b
+
+//TODO: Task 5
+
+//Compate 2 objects
+const obj1 = { a: 1, b: 2 };
+const obj2 = { a: 1, b: 2, c: 3 };
+
+function compareObjects(obj1, obj2) {
+  
+}
