@@ -290,3 +290,10 @@ function getKeysUpper(obj) {
   })
  }
  console.log(getValuesAsStrings(obj));
+
+ //task8
+ // вернуть объект в виде ['key name = John' ]
+ function getKeysAndValues(obj) {
+  return Object.entries(obj).map(([key, value]) => `key ${key} = ${value}`);
+ }
+ console.log(getKeysAndValues(obj));
