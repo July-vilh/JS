@@ -108,5 +108,14 @@ class Zoo {
     this.workers = [];
     this.animals = [];
   }
+  setAnimal(animal){
+    if(!(animal instanceof Animal)) {
+      throw new Error("Animal must be an instance of Animal");
+    }
+    this.animals.push(animal);
+  }
+
 }
+
+
 
