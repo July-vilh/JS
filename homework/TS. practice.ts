@@ -20,15 +20,20 @@ interface IAdmin extends IUser {
   role: string;
 }
 
+// до return: функция получает список всех пользователей (и обычных, и админов), тип, который мы хотим найти: "user" или "admin".
+// А возвращает — только нужных нам пользователей.
 function getSpecificUser(
   users: (IUser | IAdmin)[],
   userType: "user" | "admin"
 ) {
-  return users.filter((user) =>
-    userType === "user" ? !isAdmin(user) : isAdmin(user)
+  return users.filter(
+    (
+      user //Если нам нужны "user" — мы берём всех, кто НЕ админ. Если нам нужны "admin" — берём всех, кто админ.
+    ) => (userType === "user" ? !isAdmin(user) : isAdmin(user))
   );
 }
 
+// typeGuard: Если role есть — это админ. Если нет — обычный пользователь.
 function isAdmin(user: IUser | IAdmin): user is IAdmin {
   return "role" in user;
 }
@@ -70,6 +75,18 @@ console.log(
      и возвращающую булевый ответ, все ли значения массива возвращают тру при вызове колбэка.
      Если хотя бы 1 фолс - вся функция должна вернуть фолс
 */
+
+function customEvery<T>(
+  data: T[],
+  callback: (element: T, index: number, array: T[]) => boolean
+): boolean {
+  for (let i = 0; i < data.length; i++) {
+    if (!callback(data[i], i, data)) {
+      return false;
+    }
+  }
+  return true;
+}
 
 //TODO: Task 3
 
