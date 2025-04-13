@@ -132,6 +132,46 @@ console.log(result);
     ]
 */
 
+interface ITodo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+}
+
+async function getDataFromEnpoints<T>(endpoints: string[]): Promise<T[]> { //асинхронная функция всегда возвращает промис!
+  try {
+    const arrayOfPromises = endpoints.map((url) => getData<T>(url)); //создание массива промисов для всех наших урлов, массив промисов каждый из которых незарезолвлен и готов к резолву но есть тип Т
+    const result = await Promise.all(arrayOfPromises);
+    return result;
+  } catch (err) {
+    throw err;
+  }
+}
+
+async function getData<T>(url: string): Promise<T> {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch response from ${url}`);
+    }
+    const body = (await response.json()) as T; //преобраздвание из json в объект (интерфейс типа Т)
+    return body;
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
+}
+
+getDataFromEnpoints<ITodo>([
+  "https://jsonplaceholder.typicode.com/todos/1",
+  "https://jsonplaceholder.typicode.com/todos/3",
+  "https://jsonplaceholder.typicode.com/todos/5",
+  "https://jsonplaceholder.typicode.com/todos/7",
+])
+  .then((data) => data.forEach((el) => console.log(el)))
+  .catch((err) => console.log((err as Error).message));
+
 //TODO: Task 5
 
 /*
