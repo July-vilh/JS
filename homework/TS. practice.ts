@@ -1,5 +1,7 @@
 //TODO: Task 1
 
+import { initial } from "cypress/types/lodash";
+
 /*
   2. Создайте интерфейс User с полями id (число), username (строка) и email (строка). 
       Затем создайте интерфейс Admin, который расширяет User, добавляя поле role (строка). 
@@ -88,11 +90,30 @@ function customEvery<T>(
   return true;
 }
 
+console.log(customEvery([1, 2, 3, 4, 5], (element) => element < 10));
+
 //TODO: Task 3
 
-/*
-  Написать кастомный reduce
-*/
+//Написать кастомный reduce
+
+function customReduce<T, U>(
+  data: T[],
+  callback: (result: U, element: T, index: number, array: T[]) => U,
+  initialValue: U
+) {
+  let result: U = initialValue;
+  for (let i = 0; i < data.length; i++) {
+    result = callback(result, data[i], i, data);
+  }
+  return result;
+}
+
+const result = customReduce([1, 2, 3, 4, 5], (res, el) => {
+    res.push(el ** 2);
+    return res;
+  },[] as number[] // initialValue
+);
+console.log(result);
 
 //TODO: Task 4
 /*
