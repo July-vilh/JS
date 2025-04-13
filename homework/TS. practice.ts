@@ -95,12 +95,13 @@ console.log(customEvery([1, 2, 3, 4, 5], (element) => element < 10));
 //TODO: Task 3
 
 //Написать кастомный reduce
+// U потому что аккумулятор может отличаться от того что пришло в массиве (тип)
 
 function customReduce<T, U>(
   data: T[],
   callback: (result: U, element: T, index: number, array: T[]) => U,
   initialValue: U
-) {
+): U {
   let result: U = initialValue;
   for (let i = 0; i < data.length; i++) {
     result = callback(result, data[i], i, data);
@@ -108,10 +109,13 @@ function customReduce<T, U>(
   return result;
 }
 
-const result = customReduce([1, 2, 3, 4, 5], (res, el) => {
+const result = customReduce(
+  [1, 2, 3, 4, 5],
+  (res, el) => {
     res.push(el ** 2);
     return res;
-  },[] as number[] // initialValue
+  },
+  [] as number[] // initialValue
 );
 console.log(result);
 
