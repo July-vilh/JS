@@ -265,30 +265,46 @@ class EntityRepository<T extends { id: string }> {
   }
 }
 
+// Интерфейс, описывающий структуру объекта пользователя
 interface IUser {
   id: string;
   username: string;
   password: string;
 }
 
+// Инициализация репозитория с начальным пользователем
 const initialUser: IUser = {
-  id: "asdas",
-  username: "Boris",
-  password: "12345",
+  id: "asdas", // Уникальный идентификатор
+  username: "Boris", // Имя пользователя
+  password: "12345", // Пароль
 };
+
+// Создаем репозиторий и добавляем в него начального пользователя
 const storage = new EntityRepository([initialUser]);
-console.log(storage.getAll());
+
+console.log(storage.getAll()); // Выводим все элементы репозитория (на данный момент только initialUser)
+
+// Добавляем нового пользователя
 storage.add({
-  id: "9b787144-3aa4-4498-9855-fced6c299247",
-  username: "Anna",
-  password: "12321412",
+  id: "9b787144-3aa4-4498-9855-fced6c299247", // Уникальный идентификатор
+  username: "Anna", // Имя пользователя
+  password: "12321412", // Пароль
 });
-// storage.remove("asdas");
-console.log(storage.getOne());
+
+// Получаем один элемент (в данном случае последний добавленный элемент)
+console.log(storage.getOne()); // Выводим последний добавленный элемент (Anna)
+
+// Обновляем данные пользователя с id "asdas"
 storage.update(
-  { username: "Boris Johnson", password: "asdasdsadsadsada" },
-  "asdas"
+  { username: "Boris Johnson", password: "asdasdsadsadsada" }, // Новые данные пользователя
+  "asdas" // id пользователя, которого нужно обновить
 );
-console.log(storage.getOne("asdas"));
+
+// Получаем обновлённый элемент с id "asdas"
+console.log(storage.getOne("asdas")); // Выводим обновленный элемент (Boris Johnson)
+
+// Очищаем репозиторий
 storage.clear();
-console.log(storage.getAll());
+
+// Выводим все элементы репозитория (теперь он пуст)
+console.log(storage.getAll()); // Массив должен быть пустым
