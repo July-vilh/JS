@@ -139,7 +139,8 @@ interface ITodo {
   completed: boolean;
 }
 
-async function getDataFromEnpoints<T>(endpoints: string[]): Promise<T[]> { //асинхронная функция всегда возвращает промис!
+async function getDataFromEnpoints<T>(endpoints: string[]): Promise<T[]> {
+  //асинхронная функция всегда возвращает промис!
   try {
     const arrayOfPromises = endpoints.map((url) => getData<T>(url)); //создание массива промисов для всех наших урлов, массив промисов каждый из которых незарезолвлен и готов к резолву но есть тип Т
     const result = await Promise.all(arrayOfPromises);
@@ -183,3 +184,100 @@ getDataFromEnpoints<ITodo>([
 - Обновлять элемент (Если id не передан — заменить последний добавленный элемент)
 - Очищать хранилище
 */
+
+class EntityRepository<T extends { id: string }> {
+  private storage: T[] = [];
+
+  constructor(initialData?: T[]) {
+    if (initialData) this.storage.push(...initialData);
+  }
+
+  add(entity: T) {
+    this.storage.push(entity);
+  }
+
+  getAll(): T[] {
+    return this.storage;
+  }
+
+  getOne(id?: string): T | undefined {
+    if (id) {
+      return this.findElementById(id);
+    } else {
+      return this.getLastElemet();
+    }
+  }
+
+  remove(id?: string): boolean {
+    if (id) {
+      let index = this.findElementIndex(id);
+      if (index === -1) return false;
+      this.storage.splice(index, 1);
+      return true;
+    } else {
+      if (!this.storage.length) return false;
+      this.storage.splice(this.storage.length - 1, 1);
+      return true;
+    }
+  }
+
+  update(newEntity: Omit<T, "id">, id?: string): T {
+    if (!id) {
+      const lastIndex = this.storage.length - 1;
+      if (lastIndex === -1) throw new Error("Nothing to update");
+      const element = this.storage[lastIndex];
+      this.storage[lastIndex] = { ...element, ...newEntity };
+      return this.storage[lastIndex];
+    } else {
+      const index = this.findElementIndex(id);
+      if (index === -1) throw new Error("Nothing to update");
+      const element = this.storage[index];
+      this.storage[index] = { ...element, ...newEntity };
+      return this.storage[index];
+    }
+  }
+
+  clear(): void {
+    this.storage.length = 0;
+  }
+
+  private findElementById(id: string) {
+    return this.storage.find((entity) => entity.id === id);
+  }
+
+  private findElementIndex(id: string) {
+    return this.storage.findIndex((entity) => entity.id === id);
+  }
+
+  private getLastElemet() {
+    return this.storage.at(-1);
+  }
+}
+
+interface IUser {
+  id: string;
+  username: string;
+  password: string;
+}
+
+const initialUser: IUser = {
+  id: "asdas",
+  username: "Boris",
+  password: "12345",
+};
+const storage = new EntityRepository([initialUser]);
+console.log(storage.getAll());
+storage.add({
+  id: "9b787144-3aa4-4498-9855-fced6c299247",
+  username: "Anna",
+  password: "12321412",
+});
+// storage.remove("asdas");
+console.log(storage.getOne());
+storage.update(
+  { username: "Boris Johnson", password: "asdasdsadsadsada" },
+  "asdas"
+);
+console.log(storage.getOne("asdas"));
+storage.clear();
+console.log(storage.getAll());
