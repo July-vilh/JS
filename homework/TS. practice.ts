@@ -185,72 +185,83 @@ getDataFromEnpoints<ITodo>([
 - Очищать хранилище
 */
 
+// Класс репозитория для хранения объектов с уникальными идентификаторами
 class EntityRepository<T extends { id: string }> {
-  private storage: T[] = [];
+  private storage: T[] = []; // Массив для хранения всех сущностей типа T
 
+  // Конструктор класса принимает начальные данные для storage (опционально)
   constructor(initialData?: T[]) {
-    if (initialData) this.storage.push(...initialData);
+    if (initialData) this.storage.push(...initialData); // Если начальные данные переданы, добавляем их в массив
   }
 
+  // Метод для добавления новой сущности в репозиторий
   add(entity: T) {
-    this.storage.push(entity);
+    this.storage.push(entity); // Добавляем объект в массив
   }
 
+  // Метод для получения всех сущностей
   getAll(): T[] {
-    return this.storage;
+    return this.storage; // Возвращаем весь массив сущностей
   }
 
+  // Метод для получения одной сущности по id или последней, если id не передан
   getOne(id?: string): T | undefined {
     if (id) {
-      return this.findElementById(id);
+      return this.findElementById(id); // Если передан id, ищем сущность по этому id
     } else {
-      return this.getLastElemet();
+      return this.getLastElemet(); // Если id не передан, возвращаем последний элемент массива
     }
   }
 
+  // Метод для удаления сущности по id или последней, если id не передан
   remove(id?: string): boolean {
     if (id) {
-      let index = this.findElementIndex(id);
-      if (index === -1) return false;
-      this.storage.splice(index, 1);
-      return true;
+      let index = this.findElementIndex(id); // Ищем индекс сущности с заданным id
+      if (index === -1) return false; // Если сущность не найдена, возвращаем false
+      this.storage.splice(index, 1); // Удаляем сущность по индексу
+      return true; // Возвращаем true, если удаление успешно
     } else {
-      if (!this.storage.length) return false;
-      this.storage.splice(this.storage.length - 1, 1);
-      return true;
+      if (!this.storage.length) return false; // Если массив пуст, вернуть false
+      this.storage.splice(this.storage.length - 1, 1); // Удаляем последний элемент массива
+      return true; // Возвращаем true, если удаление успешно
     }
   }
 
+  // Метод для обновления сущности по id или последней, если id не передан
   update(newEntity: Omit<T, "id">, id?: string): T {
     if (!id) {
-      const lastIndex = this.storage.length - 1;
-      if (lastIndex === -1) throw new Error("Nothing to update");
-      const element = this.storage[lastIndex];
-      this.storage[lastIndex] = { ...element, ...newEntity };
-      return this.storage[lastIndex];
+      const lastIndex = this.storage.length - 1; // Получаем индекс последнего элемента
+      if (lastIndex === -1) throw new Error("Nothing to update"); // Если массив пуст, выбрасываем ошибку
+      const element = this.storage[lastIndex]; // Берем последний элемент
+      this.storage[lastIndex] = { ...element, ...newEntity }; // Обновляем последний элемент
+      return this.storage[lastIndex]; // Возвращаем обновлённый элемент
     } else {
-      const index = this.findElementIndex(id);
-      if (index === -1) throw new Error("Nothing to update");
-      const element = this.storage[index];
-      this.storage[index] = { ...element, ...newEntity };
-      return this.storage[index];
+      const index = this.findElementIndex(id); // Ищем индекс сущности с заданным id
+      if (index === -1) throw new Error("Nothing to update"); // Если сущность не найдена, выбрасываем ошибку
+      const element = this.storage[index]; // Берем сущность по индексу
+      this.storage[index] = { ...element, ...newEntity }; // Обновляем сущность
+      return this.storage[index]; // Возвращаем обновлённый элемент
     }
   }
 
+  // Метод для очистки хранилища (удаляет все элементы)
   clear(): void {
-    this.storage.length = 0;
+    this.storage.length = 0; // Очищаем массив
   }
 
+  // Приватный метод для поиска сущности по id
   private findElementById(id: string) {
-    return this.storage.find((entity) => entity.id === id);
+    return this.storage.find((entity) => entity.id === id); // Ищем сущность с данным id
   }
 
+  // Приватный метод для поиска индекса сущности по id
   private findElementIndex(id: string) {
-    return this.storage.findIndex((entity) => entity.id === id);
+    return this.storage.findIndex((entity) => entity.id === id); // Ищем индекс сущности с данным id
   }
 
+  // Приватный метод для получения последнего элемента массива
   private getLastElemet() {
-    return this.storage.at(-1);
+    return this.storage.at(-1); // Возвращаем последний элемент массива
   }
 }
 
